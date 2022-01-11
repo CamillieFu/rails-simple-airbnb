@@ -1,0 +1,31 @@
+<nav class="navbar navbar-light bg-light justify-content-between">
+  <a class="navbar-brand">AirPnT</a>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search All Flats" aria-label="Search">
+    <button class="btn btn-outline-success mx-2 my-sm-0" type="submit">Search</button>
+    <%= link_to 'Add a Flat', new_flat_path, class: 'btn btn-outline-primary mx-auto my-sm-0' %>
+  </form>
+</nav>
+<div class="container">
+  <div class="row">
+    <%  @flats.each do |flat|%>
+    <div class="card m-3 shadow-sm mx-auto" style="width: 18rem;">
+      <img class="card-img-top" src="https://source.unsplash.com/collection/<%= [3639792, 1582764, 3379521, 1945110, 4753897].sample %>/1000x500" alt="Card image cap">
+      <div class="card-body">
+          <h5 class="card-title"><%= flat.name  %></h5>
+          <p class="card-text"><%= flat.address %></p>
+          <div class="details d-flex justify-content-between m-2">
+            <p><i class="fas fa-users display-wrap"> <%= flat.number_of_guests %></i></p>
+            <p><i class="fas fa-dollar-sign"> <%= flat.price_per_night %> </i></p>
+          </div>
+      </div>
+      <div class="links d-flex justify-content-around border-top p-4">
+        <%= link_to 'Details', flat_path(flat), class: "card-link" %>
+        <%= link_to 'Edit', edit_flat_path(flat), class: "card-link" %>
+        <%= link_to 'Remove', flat_path(flat), method: :delete, data: { confirm: "Delete?" }, class: "card-link" %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+
+</div>

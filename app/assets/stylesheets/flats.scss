@@ -1,0 +1,18 @@
+// Place all the styles related to the flats controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+// Graphical variables
+
+// External libraries
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+.details {
+  font-family: 'Prompt', sans-serif;
+  color: rgb(43, 43, 43);
+}
+
+.card-body {
+  background-color: rgba(223, 221, 221, 0.42);
+}
