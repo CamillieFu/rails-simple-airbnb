@@ -8,6 +8,10 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+nav a {
+  text-decoration: none !important;
+  color: black;
+}
 .details {
   font-family: 'Prompt', sans-serif;
   color: rgb(43, 43, 43);
@@ -51,6 +55,14 @@
 .flat-show-cards {
   // min-width: max-content;
   flex-grow: 1;
+}
+
+.flat-show-card p {
+  font-size: 1.3rem;
+}
+
+.flat-show-card.description {
+  padding-bottom: 300px;
 }
 
 @media(max-width: 600px)  {
