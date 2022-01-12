@@ -2,7 +2,7 @@
   <%= f.input :name %>
   <%= f.input :address %>
   <%= f.input :description %>
-  <%= f.input :number_of_guests %>
+  <%= f.input :number_of_guests, collection: 0..50 %>
   <%= f.input :price_per_night %>
   <%= f.submit class: 'btn btn-success'%>
 <% end %>

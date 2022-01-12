@@ -2,7 +2,12 @@ class FlatsController < ApplicationController
 before_action :set_flat, only: [:show, :edit, :update, :destroy]
 
   def index
-    @flats = Flat.all
+    @search = params[:search]
+    if @search == nil
+      @flats = Flat.all
+    else
+      @flats = Flat.where('address LIKE ?', "%#{@search}%")
+    end
   end
 
   def show
@@ -30,11 +35,16 @@ before_action :set_flat, only: [:show, :edit, :update, :destroy]
     redirect_to flat_path(@flat)
   end
 
+  def search
+    @search = params[:search]
+    raise
+    @flats = Flat.where('address LIKE ?', "%#{@search}%")
+  end
+
   def destroy
     @flat.destroy
     redirect_to flats_path
   end
-
 
   private
   def flat_params
