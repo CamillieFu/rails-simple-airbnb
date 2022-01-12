@@ -1,0 +1,46 @@
+<div class="banner" style='background-image: url("https://source.unsplash.com/collection/<%= [3639792, 1582764, 3379521, 1945110, 4753897].sample %>/1000x500")'>
+</div>
+<div class="container">
+  <div class="flat-details d-flex col-8 col-md-12 col-sm-12">
+
+    <div class="flat-show-cards">
+      <div class="flat-show-card title">
+        <h1><%= @flat.name %></h1>
+        <h3><%= @flat.address %></h3>
+      </div>
+      <div class="flat-show-card description">
+        <h2>More about this flat ...</h2>
+        <h4><%= @flat.description %></h4>
+      </div>
+    </div>
+
+    <div class="flat-booking-cards">
+      <div class="flat-show-card">
+        <h4 class="text-center">Book this flat!</h4>
+        <form class="form-inline" form-actions="show">
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">From:</span>
+            </div>
+            <input type="date" class="form-control" placeholder="12/20/2022" aria-label="Username" aria-describedby="basic-addon1" name="start">
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">Until:</span>
+            </div>
+            <input type="date" class="form-control" placeholder="12/25/2022" aria-label="Username" aria-describedby="basic-addon1" name="end">
+          </div>
+          <button class="btn btn-success my-2 my-sm-0 mx-auto" type="submit">Book</button>
+        </form>
+      </div>
+
+      <div class="flat-show-card details">
+        <h3>Details</h3>
+        <div class="d-flex">
+          <p><i class="fas fa-users display-wrap mr-4"> <%= @flat.number_of_guests %></i></p>
+          <p><i class="fas fa-dollar-sign"> <%= @flat.price_per_night %> </i></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -14,5 +14,35 @@
 }
 
 .card-body {
-  background-color: rgba(223, 221, 221, 0.42);
+  background-color: rgba(238, 237, 237, 0.42);
+}
+
+.navbar h1 {
+  font-size:2rem;
+}
+
+.banner {
+  height: 350px;
+  background-position: center;
+  background-size: cover;
+  // position: absolute;
+}
+
+.flat-show-card {
+  margin: 0px 24px;
+  margin-bottom: 24px;
+  background-color: rgb(238, 237, 237);
+  padding: 36px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.flat-details, .flat-booking-cards {
+  top: -200px;
+  // right: 50px;
+}
+
+.flat-show-cards {
+  width: 1000px;
 }
