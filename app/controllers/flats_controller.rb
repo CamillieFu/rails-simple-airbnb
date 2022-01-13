@@ -37,12 +37,6 @@ before_action :set_flat, only: [:show, :edit, :update, :destroy]
     redirect_to flat_path(@flat)
   end
 
-  # def search
-  #   @search = params[:search]
-  #   raise
-  #   @flats = Flat.where('address LIKE ?', "%#{@search}%")
-  # end
-
   def destroy
     @flat.destroy
     redirect_to flats_path
