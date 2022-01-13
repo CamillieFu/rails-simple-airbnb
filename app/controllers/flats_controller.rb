@@ -11,7 +11,9 @@ before_action :set_flat, only: [:show, :edit, :update, :destroy]
   end
 
   def show
+    @search = params[:search]
     @booking = [params[:start], params[:end]]
+    redirect_to "/flats?search=#{@search}" if @search
   end
 
   def new
@@ -35,11 +37,11 @@ before_action :set_flat, only: [:show, :edit, :update, :destroy]
     redirect_to flat_path(@flat)
   end
 
-  def search
-    @search = params[:search]
-    raise
-    @flats = Flat.where('address LIKE ?', "%#{@search}%")
-  end
+  # def search
+  #   @search = params[:search]
+  #   raise
+  #   @flats = Flat.where('address LIKE ?', "%#{@search}%")
+  # end
 
   def destroy
     @flat.destroy
