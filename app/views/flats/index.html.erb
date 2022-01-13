@@ -1,11 +1,11 @@
 <div class="container">
   <div class="headers">
     <% if @flats == [] %>
-      <p class="my-3">Sorry, no results matched your search ...</p>
+      <h3 class="my-3">Sorry, no results matched your search ...</h3>
     <% elsif @search && @flats != [] %>
-      <h1>You searched for <%= @search %>. Here are you results.</h1>
+      <h3 class="my-3">You searched for <%= @search %>. Here are you results.</h3>
     <% else !@search %>
-      <h1>All of our (<%= Flat.count %>) flats</h1>
+      <h3 class="my-3">All of our (<%= Flat.count %>) flats</h3>
     <% end %>
   </div>
   <div class="row">

@@ -13,7 +13,7 @@ before_action :set_flat, only: [:show, :edit, :update, :destroy]
   def show
     @search = params[:search]
     @booking = [params[:start], params[:end]]
-    redirect_to "/flats?search=#{@search}" if @search
+    # redirect_to "/flats?search=#{@search}" if @search
   end
 
   def new
